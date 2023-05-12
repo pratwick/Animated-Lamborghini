@@ -1,0 +1,171 @@
+body{
+    overflow: hidden; /* it will hide all the overflow which we have in our body*/ 
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sky{
+    height: 578px;
+    width: 100%;
+    background: url('background.jpg');
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: absolute;
+}
+
+.bird img {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 330px;
+    right: 270px;
+    animation-name: birdMove;
+    animation-iteration-count: 5;
+    animation-delay: 10s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+
+.trees {
+    height: 545px;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -73px;
+
+    animation-name: shakeBackground;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;     
+}
+
+
+.track {
+    height: 300px;
+    width: 5000vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 420px;
+    animation-name: carMove;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+}
+
+
+.car {
+    left: 390px;
+    height: 70px;
+    width: 230px;
+    background-image: url(imageedit_8_3006671218.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 60px;
+
+    animation-name: shake;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.wheelL img {
+    height: 36px;
+    width: 36px;
+    position: relative;
+    top: 26px;
+    left: 25px;
+
+     animation-name: wheelRotation;
+     animation-iteration-count: infinite;
+     animation-duration: .15s;
+     animation-timing-function: linear;
+}
+
+.wheelR img {
+    height: 36px;
+    width: 36px;
+    position: relative;
+    top: -12px;
+    left: 159px;
+    
+     animation-name: wheelRotation;
+     animation-iteration-count: infinite;
+     animation-duration: .15s;
+     animation-timing-function: linear;
+}
+
+@keyframes wheelRotation
+{
+    100%{
+       transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shake{
+      0%{
+           transform: translateY(-5px);
+      }  
+
+      50%{
+          transform: translateY(5px);
+     }
+
+     100%{
+          transform: translateY(-5px);
+     }
+}
+
+@keyframes shakeBackground{
+    0%{
+         transform: translateY(-10px);
+    }  
+
+    50%{
+        transform: translateY(10px);
+   }
+
+   100%{
+        transform: translateY(-10px);
+   }
+
+}
+
+@keyframes skyMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+
+@keyframes birdMove{
+    0%{
+        transform: translate( 0px,0px);
+    }
+    25%{
+        transform: translate(-100px,-200px);
+    }
+    50%{
+        transform: translate(-300px,-5px);
+    }
+    75%{
+        transform: translate(-500px,-300px);
+    }
+    100%{
+        transform: translate(-1190px,-351px);
+    }
+}
